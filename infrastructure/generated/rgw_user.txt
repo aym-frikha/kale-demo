@@ -1,0 +1,38 @@
+{
+    "user_id": "ubuntu",
+    "display_name": "Ubuntu Ceph",
+    "email": "",
+    "suspended": 0,
+    "max_buckets": 1000,
+    "auid": 0,
+    "subusers": [],
+    "keys": [
+        {
+            "user": "ubuntu",
+            "access_key": "XSHDZ502J93EGFAC5Z8S",
+            "secret_key": "g2XuKPZbmBYs1PO91XcJVB8fvXeLB0oAdl6nYMaq"
+        }
+    ],
+    "swift_keys": [],
+    "caps": [],
+    "op_mask": "read, write, delete",
+    "default_placement": "",
+    "placement_tags": [],
+    "bucket_quota": {
+        "enabled": false,
+        "check_on_raw": false,
+        "max_size": -1,
+        "max_size_kb": 0,
+        "max_objects": -1
+    },
+    "user_quota": {
+        "enabled": false,
+        "check_on_raw": false,
+        "max_size": -1,
+        "max_size_kb": 0,
+        "max_objects": -1
+    },
+    "temp_url_keys": [],
+    "type": "rgw"
+}
+
