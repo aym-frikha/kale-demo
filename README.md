@@ -49,3 +49,30 @@ $ ./deploy-microk8s.sh
 $ sudo usermod -a -G microk8s ubuntu
 $ sudo chown -f -R ubuntu ~/.kube
 ```
+
+# Setup Kale image
+
+1- Download Kale image repository:
+```
+$ git clone https://github.com/kubeflow-kale/kale
+```
+2- Modify Dockerfile to download necessary libraries:
+```
+$ cd kale/docker/jupyterlab
+```
+3- Add additional packages to the install packages section in the Dockerfile:
+```
+.
+.
+pip3 install --upgrade  pandas==0.23.4 elasticsearch==7.7.0 boto3==1.13.16 &&\
+.
+.
+.
+```
+
+3- Build and push the image to the local registry:
+```
+$ sudo docker build . -t localhost:32000/kale-demo
+$ sudo docker push localhost:32000/kale-demo
+```
+
